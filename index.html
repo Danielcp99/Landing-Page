@@ -4,44 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Subscribe to our newsletter for updates">
+    <title>Modern Newsletter Subscription</title>
     <link rel="stylesheet" href="index.css">
-
 </head>
 
 <body>
-    <header>
-        <figure>
-            <img src="freepik__adjust__35659.png" alt="Logo Here">
-        </figure>
-        <ul>
-            <li><a href="https://github.com/Danielcp99" target="_blank" title="HOME">HOME</a> </li>
-            <li><a href="https://github.com/Danielcp99" target="_blank" title="ABOUT">ABOUT</a> </li>
-            <li><a href="https://github.com/Danielcp99" target="_blank" title="PRODUCTS">PRODUCTS</a> </li>
-            <li><a href="https://github.com/Danielcp99" target="_blank" title="CONTACT">CONTACT</a> </li>
-            <li><a href="https://github.com/Danielcp99" target="_blank" title="SIGN IN">SIGN IN</a> </li>
-        </ul>
+    <header class="header">
+        <nav class="nav-container">
+            <figure class="logo-container">
+                <img src="freepik__adjust__35659.png" alt="Company Logo" width="50" height="50">
+            </figure>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="https://github.com/Danielcp99" class="nav-link">Home</a></li>
+                    <li><a href="https://github.com/Danielcp99" class="nav-link">About</a></li>
+                    <li><a href="https://github.com/Danielcp99" class="nav-link">Products</a></li>
+                    <li><a href="https://github.com/Danielcp99" class="nav-link">Contact</a></li>
+                    <li><a href="https://github.com/Danielcp99" class="nav-link nav-link-cta">Sign In</a></li>
+                </ul>
+            </nav>
+        </nav>
     </header>
 
-    <section>
-        <h1>SUBSCRIBE NOW <spam>to Our Newsletter</spam>
-        </h1>
-        <h4> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae tempora quae nemo? Voluptates beatae
-            odio omnis accusantium. Sed, possimus laborum sequi corporis ut sit, fugiat, earum quia sunt qui expedita?
-        </h4>
-        <form class="newsletter-form">
-            <input type="text" placeholder="Name" id="name" name="name">
-            <input type="email" placeholder="Email" id="email" name="email">
-            <button type="submit">Send</button>
-        </form>
-    </section>
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">
+                    SUBSCRIBE NOW
+                    <span class="hero-subtitle">to Our Newsletter</span>
+                </h1>
 
-    <footer>
-        <p>Images by: <a href="https://www.freepik.com/" target="_blank">Footpik 🔗</a></p>
-        <p>©2025 Carlos Daniel | All rights reserved.</p>
+                <p class="hero-description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae tempora quae nemo?
+                    Voluptates beatae odio omnis accusantium. Sed, possimus laborum sequi corporis ut sit,
+                    fugiat, earum quia sunt qui expedita?
+                </p>
+
+                <form class="newsletter-form" action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required aria-label="Your name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required
+                            aria-label="Your email">
+                    </div>
+                    <button type="submit" class="submit-btn">Subscribe Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Images by: <a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik 🔗</a>
+            </p>
+            <p>©2025 Carlos Daniel | All rights reserved.</p>
+        </div>
     </footer>
 
-
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
